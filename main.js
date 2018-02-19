@@ -2,9 +2,9 @@ var http = require('http');
 var https = require('https');
 http.createServer(function(req, res) {
         var path = require('path');
-        var uuid = req.url.toString().substr("/MinecraftSkins".length + 1).substring(0$
-        console.log(uuid);
-        var options = {host: 'api.mojang.com',port: 443,path: '/users/profiles/minecra$
+        var uuid = req.url.toString().substr("/MinecraftSkins".length + 1).substring(0, req.url.toString().substr("/MinecraftSkins".length + 1).length -4);
+        //console.log(uuid);
+        var options = {host: 'api.mojang.com',port: 443,path: '/users/profiles/minecraft/' + uuid};
         console.log('api.mojang.com/users/profiles/minecraft/' + uuid);
         var request = https.request(options, function(resy) {
                 var data = '';
@@ -13,7 +13,7 @@ http.createServer(function(req, res) {
                 });
                 resy.on('end', function() {
                         try {
-                                console.log(data);
+                                //console.log(data);
                                 var json = JSON.parse(data);
                                 getImageFromUUID(json.id, res);
                         } catch (err) {
@@ -29,7 +29,7 @@ http.createServer(function(req, res) {
         request.end();
 }).listen(8080);
 function getImageFromUUID(uuid, res) {
-        console.log('started uuid match with ' + uuid);
+        //console.log('started uuid match with ' + uuid);
         var options = {host: 'crafatar.com',port: 443,path: '/skins/' +uuid + '.png'};
         var request1 = https.request(options,function(resyy) {
                 var data = '';
