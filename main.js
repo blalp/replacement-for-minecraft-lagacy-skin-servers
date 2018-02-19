@@ -13,6 +13,7 @@ http.createServer(function(req, res) {
                 });
                 resy.on('end', function() {
                         try {
+                                console.log(data);
                                 var json = JSON.parse(data);
                                 getImageFromUUID(json.id, res);
                         } catch (err) {
