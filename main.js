@@ -5,7 +5,7 @@ http.createServer(function(req, res) {
         var uuid = req.url.toString().substr("/MinecraftSkins".length + 1).substring(0, req.url.toString().substr("/MinecraftSkins".length + 1).length -4);
         //console.log(uuid);
         var options = {host: 'api.mojang.com',port: 443,path: '/users/profiles/minecraft/' + uuid};
-        console.log('api.mojang.com/users/profiles/minecraft/' + uuid);
+        //console.log('api.mojang.com/users/profiles/minecraft/' + uuid);
         var request = https.request(options, function(resy) {
                 var data = '';
                 resy.on('data', function(chunk) {
