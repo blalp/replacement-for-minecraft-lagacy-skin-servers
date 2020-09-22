@@ -1,3 +1,7 @@
+# FYI Lumy Skin Patch is easier to install
+Someone else made a mod that does the same thing as this server with far easier installation, might want to check it ou.
+https://www.curseforge.com/minecraft/mc-mods/lumy-skin-patch
+
 # replacement for minecraft lagacy skin servers
 I am hosting this at 159.69.202.67 and installation instructions for rerouting your computers attemps to acsess the outdated skin api to my servers are here https://www.superfuntime.org/forum/index.php/topic,183323.msg877218.html#msg877218 
 
